@@ -13,7 +13,7 @@
 #define PRINTER_MMU_TYPE PRINTER_MK3S_MMU2
 #define PRINTER_MMU_NAME PRINTER_MK3S_MMU2_NAME
 #define FILAMENT_SIZE "1_75mm_MK3"
-#define NOZZLE_TYPE "E3Dv6full"
+#define NOZZLE_TYPE "Mosquito Hotend"
 
 // Developer flag
 #define DEVELOPER
@@ -282,7 +282,7 @@
  *------------------------------------*/
 
 // Mintemps
-#define HEATER_0_MINTEMP 15
+#define HEATER_0_MINTEMP 5
 #define HEATER_1_MINTEMP 5
 #define HEATER_2_MINTEMP 5
 #define HEATER_MINTEMP_DELAY 15000                // [ms] ! if changed, check maximal allowed value @ ShortTimer
@@ -299,7 +299,7 @@
 #if defined(E3D_PT100_EXTRUDER_WITH_AMP) || defined(E3D_PT100_EXTRUDER_NO_AMP)
 #define HEATER_0_MAXTEMP 410
 #else
-#define HEATER_0_MAXTEMP 305
+#define HEATER_0_MAXTEMP 450
 #endif
 #define HEATER_1_MAXTEMP 305
 #define HEATER_2_MAXTEMP 305
@@ -546,6 +546,7 @@
 // 13 is 100k Hisens 3950  1% up to 300°C for hotend "Simple ONE " & "Hotend "All In ONE"
 // 20 is the PT100 circuit found in the Ultimainboard V2.x
 // 60 is 100k Maker's Tool Works Kapton Bed Thermistor beta=3950
+// 67 is 450C thermistor from SliceEngineering
 //
 //    1k ohm pullup tables - This is not normal, you would have to have changed out your 4.7k for 1k
 //                          (but gives greater accuracy and more stable PID)
@@ -565,7 +566,7 @@
 #elif defined(E3D_PT100_EXTRUDER_NO_AMP)
 #define TEMP_SENSOR_0 148
 #else
-#define TEMP_SENSOR_0 5
+#define TEMP_SENSOR_0 67
 #endif
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
